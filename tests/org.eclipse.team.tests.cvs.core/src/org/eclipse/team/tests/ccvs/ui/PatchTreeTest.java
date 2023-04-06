@@ -27,9 +27,9 @@ import org.eclipse.team.core.synchronize.SyncInfoSet;
 import org.eclipse.team.internal.ccvs.core.mapping.CVSActiveChangeSet;
 import org.eclipse.team.internal.ui.synchronize.ChangeSetCapability;
 import org.eclipse.team.internal.ui.synchronize.ChangeSetDiffNode;
+import org.eclipse.team.internal.ui.synchronize.ChangeSetModelComparator;
 import org.eclipse.team.internal.ui.synchronize.ChangeSetModelProvider;
-import org.eclipse.team.internal.ui.synchronize.ChangeSetModelSorter;
-import org.eclipse.team.internal.ui.synchronize.SynchronizeModelElementSorter;
+import org.eclipse.team.internal.ui.synchronize.SynchronizeModelElementComparator;
 import org.eclipse.team.internal.ui.synchronize.SynchronizePageConfiguration;
 import org.eclipse.team.internal.ui.synchronize.TreeViewerAdvisor;
 import org.eclipse.team.internal.ui.synchronize.UnchangedResourceModelElement;
@@ -178,9 +178,9 @@ public class PatchTreeTest extends EclipseTest {
 
 		public void init() {
 			ChangeSetModelProvider provider = new MyModelProvider(this);
-			provider.setViewerSorter(new SynchronizeModelElementSorter());
-			ChangeSetModelSorter sorter = new ChangeSetModelSorter(provider, 0);
-			setSorter(sorter);
+			provider.setViewerComparator(new SynchronizeModelElementComparator());
+			ChangeSetModelComparator sorter = new ChangeSetModelComparator(provider, 0);
+			setComparator(sorter);
 		}
 	}
 	

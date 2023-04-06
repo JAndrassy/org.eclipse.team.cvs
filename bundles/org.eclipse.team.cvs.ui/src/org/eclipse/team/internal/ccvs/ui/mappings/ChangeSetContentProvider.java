@@ -620,7 +620,7 @@ public class ChangeSetContentProvider extends ResourceModelContentProvider imple
 		INavigatorSorterService sortingService = contentService.getSorterService();
 		INavigatorContentExtension extension = getExtensionSite().getExtension();
 		if (extension != null) {
-			ViewerSorter sorter = sortingService.findSorter(extension.getDescriptor(), getModelProvider(), new DiffChangeSet(), new DiffChangeSet());
+			Object sorter = sortingService.findSorter(extension.getDescriptor(), getModelProvider(), new DiffChangeSet(), new DiffChangeSet());
 			if (sorter instanceof ChangeSetSorter) {
 				return (ChangeSetSorter) sorter;
 			}

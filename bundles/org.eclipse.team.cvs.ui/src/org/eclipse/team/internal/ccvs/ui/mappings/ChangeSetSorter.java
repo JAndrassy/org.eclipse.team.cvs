@@ -17,10 +17,10 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.team.internal.ccvs.core.mapping.CVSCheckedInChangeSet;
 import org.eclipse.team.internal.core.subscribers.ActiveChangeSet;
 import org.eclipse.team.internal.core.subscribers.ChangeSet;
-import org.eclipse.team.internal.ui.mapping.ResourceModelSorter;
+import org.eclipse.team.internal.ui.mapping.ResourceModelComparator;
 import org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration;
 
-public class ChangeSetSorter extends ResourceModelSorter {
+public class ChangeSetSorter extends ResourceModelComparator {
 
 	// Comment sorting options
 	public final static int DATE = 1;
@@ -70,7 +70,7 @@ public class ChangeSetSorter extends ResourceModelSorter {
 	}
 
 	private int compareNames(String s1, String s2) {
-		return collator.compare(s1, s2);
+		return getComparator().compare(s1, s2);
 	}
 	
 	public int getCommentCriteria() {
