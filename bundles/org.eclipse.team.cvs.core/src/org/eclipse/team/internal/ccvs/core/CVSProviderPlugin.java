@@ -14,8 +14,6 @@
 package org.eclipse.team.internal.ccvs.core;
  
 import java.io.*;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.*;
 
 import org.eclipse.core.resources.*;
@@ -135,16 +133,16 @@ public class CVSProviderPlugin extends Plugin {
 	private static final String INFO_PROXY_USER = "org.eclipse.team.cvs.core.proxy.user"; //$NON-NLS-1$ 
 	private static final String INFO_PROXY_PASS = "org.eclipse.team.cvs.core.proxy.pass"; //$NON-NLS-1$ 
 
-	private static final URL FAKE_URL;
-	static {
-		URL temp = null;
-		try {
-			temp = new URL("http://org.eclipse.team.cvs.proxy.auth");//$NON-NLS-1$ 
-		} catch (MalformedURLException e) {
-			// Should never fail
-		}
-		FAKE_URL = temp;
-	}
+//	private static final URL FAKE_URL;
+//	static {
+//		URL temp = null;
+//		try {
+//			temp = new URL("http://org.eclipse.team.cvs.proxy.auth");//$NON-NLS-1$ 
+//		} catch (MalformedURLException e) {
+//			// Should never fail
+//		}
+//		FAKE_URL = temp;
+//	}
 	
 	
 	public synchronized CVSWorkspaceSubscriber getCVSWorkspaceSubscriber() {
@@ -706,8 +704,9 @@ public class CVSProviderPlugin extends Plugin {
 	
 	private Map<String,String> getAuthInfo() {
 		// Retrieve username and password from keyring.
-		Map<String,String> authInfo = Platform.getAuthorizationInfo(FAKE_URL, "proxy", ""); //$NON-NLS-1$ //$NON-NLS-2$
-		return authInfo!=null ? authInfo : Collections.emptyMap();
+//		Map<String,String> authInfo = Platform.getAuthorizationInfo(FAKE_URL, "proxy", ""); //$NON-NLS-1$ //$NON-NLS-2$
+//		return authInfo!=null ? authInfo : Collections.emptyMap();
+		return null;
 	}
 
 	public void setProxyAuth(String proxyUser, String proxyPass) {
@@ -721,12 +720,12 @@ public class CVSProviderPlugin extends Plugin {
 		if (proxyPass != null) {
 			authInfo.put(INFO_PROXY_PASS, proxyPass);
 		}
-		try {
-			Platform.addAuthorizationInfo(FAKE_URL, "proxy", "", authInfo);  //$NON-NLS-1$ //$NON-NLS-2$
-		} catch (CoreException e) {
-			// We should probably wrap the CoreException here!
-			CVSProviderPlugin.log(e);
-		}
+//		try {
+//			Platform.addAuthorizationInfo(FAKE_URL, "proxy", "", authInfo);  //$NON-NLS-1$ //$NON-NLS-2$
+//		} catch (CoreException e) {
+//			// We should probably wrap the CoreException here!
+//			CVSProviderPlugin.log(e);
+//		}
 	}
 	
 	public synchronized ActiveChangeSetManager getChangeSetManager() {
