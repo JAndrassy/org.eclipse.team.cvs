@@ -15,16 +15,16 @@
   <parent>
     <groupId>org.eclipse</groupId>
     <artifactId>eclipse-platform-parent</artifactId>
-    <version>4.23.0-SNAPSHOT</version>
+    <version>4.28.0-SNAPSHOT</version>
     <relativePath>../eclipse-platform-parent</relativePath>
   </parent>
 
-  <groupId>eclipse.platform.team</groupId>
-  <artifactId>eclipse.platform.team</artifactId>
+  <groupId>org.eclipse.cvs</groupId>
+  <artifactId>org.eclipse.cvs</artifactId>
   <packaging>pom</packaging>
 
   <properties>
-    <tycho.scmUrl>scm:git:https://git.eclipse.org/r/platform/eclipse.platform.team.git</tycho.scmUrl>
+    <tycho.scmUrl>scm:git:https://github.com/JAndrassy/org.eclipse.team.cvs</tycho.scmUrl>
     <code.ignoredWarnings>-warn:-deprecation,raw,unchecked,warningToken</code.ignoredWarnings>
   </properties>
 
@@ -52,23 +52,13 @@
   </profiles>
 
   <modules>
-    <module>bundles/org.eclipse.compare</module>
-    <module>bundles/org.eclipse.compare.win32</module>
-    <module>bundles/org.eclipse.compare.core</module>
-    <module>bundles/org.eclipse.core.net</module>
-    <module>bundles/org.eclipse.jsch.core</module>
-    <module>bundles/org.eclipse.jsch.ui</module>
-    <module>bundles/org.eclipse.team.core</module>
-    <module>bundles/org.eclipse.team.ui</module>
-    <module>bundles/org.eclipse.team.genericeditor.diff.extension</module>
-    <module>bundles/org.eclipse.ui.net</module>
-    <module>examples/org.eclipse.compare.examples</module>
-    <module>examples/org.eclipse.compare.examples.xml</module>
-    <module>examples/org.eclipse.team.examples.filesystem</module>
+    <module>bundles/org.eclipse.cvs</module>
+    <module>bundles/org.eclipse.team.cvs.core</module>
+    <module>bundles/org.eclipse.team.cvs.ssh2</module>
+    <module>bundles/org.eclipse.team.cvs.ui</module>
 
-    <!-- fragments -->
-    <module>bundles/org.eclipse.core.net.linux</module>
-    <module>bundles/org.eclipse.core.net.win32.x86_64</module>
+    <module>features/org.eclipse.cvs-feature</module>
+
     <module>tests</module>
    
   </modules>

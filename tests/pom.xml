@@ -12,20 +12,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>eclipse.platform.team</groupId>
-    <artifactId>eclipse.platform.team</artifactId>
-    <version>4.23.0-SNAPSHOT</version>
+    <groupId>org.eclipse.cvs</groupId>
+    <artifactId>org.eclipse.cvs</artifactId>
+    <version>4.28.0-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
-  <artifactId>eclipse.platform.team.tests</artifactId>
+  <artifactId>org.eclipse.cvs.tests</artifactId>
   <packaging>pom</packaging>
   <properties>
     <code.ignoredWarnings>${tests.ignoredWarnings}</code.ignoredWarnings>
   </properties>
   <modules>
-    <module>org.eclipse.compare.tests</module>
-    <module>org.eclipse.core.tests.net</module>
-    <module>org.eclipse.jsch.tests</module>
-    <module>org.eclipse.team.tests.core</module>
+    <module>org.eclipse.team.tests.cvs.core</module>
   </modules>
 </project>
