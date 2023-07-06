@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="Eclipse CVS Client" url="https://storage.googleapis.com/eclipse-cvs-plugin/">
+      This is the original Eclipse CVS Client plugin extracted from the now empty eclipse.platform.team repository. The Eclipse Team stopped maintaining the plugin and removed it from the Eclipse code base in 2022.
+   </description>
+   <feature url="features/org.eclipse.cvs_1.4.2200.202307061005.jar" id="org.eclipse.cvs" version="1.4.2200.202307061005">
+      <category name="Collaboration"/>
+   </feature>
+   <category-def name="Collaboration" label="Collaboration"/>
+</site>
