@@ -255,6 +255,9 @@ public class CVSUIPlugin extends AbstractUIPlugin {
 	 * @return the plugin instance
 	 */
 	public static CVSUIPlugin getPlugin() {
+		if (plugin == null) {
+			plugin = new CVSUIPlugin();
+		}
 		return plugin;
 	}
 	
