@@ -14,8 +14,11 @@
 package org.eclipse.team.internal.ccvs.ui.model;
 
 import java.lang.reflect.InvocationTargetException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.TimeZone;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.jobs.ISchedulingRule;
@@ -31,10 +34,6 @@ import org.eclipse.team.internal.ccvs.ui.operations.FetchMembersOperation.Remote
 import org.eclipse.ui.progress.IDeferredWorkbenchAdapter;
 import org.eclipse.ui.progress.IElementCollector;
 
-import com.ibm.icu.text.DateFormat;
-import com.ibm.icu.text.SimpleDateFormat;
-import com.ibm.icu.util.TimeZone;
-
 public class CVSTagElement extends CVSModelElement implements IDeferredWorkbenchAdapter {
 	CVSTag tag;
 	ICVSRepositoryLocation root;
@@ -46,18 +45,11 @@ public class CVSTagElement extends CVSModelElement implements IDeferredWorkbench
 	private static SimpleDateFormat localShortFormat = new SimpleDateFormat(REPO_VIEW_SHORT_FORMAT,Locale.getDefault());
 	private static DateFormat localLongDateFormat = DateFormat.getDateTimeInstance(DateFormat.MEDIUM,DateFormat.MEDIUM);
 	private static DateFormat localShortDateFormat = DateFormat.getDateInstance(DateFormat.MEDIUM);
-	private static DateFormat localYearDateFormat = DateFormat.getInstanceForSkeleton(DateFormat.YEAR);
+
 	private static SimpleDateFormat timeColumnFormat = new SimpleDateFormat(TIME_ONLY_COLUMN_FORMAT, Locale.getDefault());
 
 	static synchronized public String toDisplayString(Date date){
-		String year = localYearDateFormat.format(date);
-		boolean permitSimpleDateFormat = true;
-		try {
-			Integer.parseInt(year);			
-		} catch (NumberFormatException e) {
-			// This can happen if the Year is not a number but also includes an Era eg: JapaneseCalendar
-			permitSimpleDateFormat = false;
-		}
+		boolean permitSimpleDateFormat = "gregory".equals(localLongFormat.getCalendar().getCalendarType()); //$NON-NLS-1$
 		DateFormat selectedFormat = localLongFormat;
 		if (!permitSimpleDateFormat) {
 			selectedFormat = localLongDateFormat;
