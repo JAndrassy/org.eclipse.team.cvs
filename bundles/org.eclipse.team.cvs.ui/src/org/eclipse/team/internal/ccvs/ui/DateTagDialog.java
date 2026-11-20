@@ -13,7 +13,9 @@
  *******************************************************************************/
 package org.eclipse.team.internal.ccvs.ui;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 import org.eclipse.jface.dialogs.*;
 import org.eclipse.jface.dialogs.Dialog;
@@ -24,9 +26,6 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.*;
 import org.eclipse.team.internal.ui.dialogs.DialogArea;
 import org.eclipse.ui.PlatformUI;
-
-import com.ibm.icu.util.Calendar;
-import com.ibm.icu.util.TimeZone;
 
 /**
  * Dialog for obtaining a date from the user
@@ -71,7 +70,7 @@ public class DateTagDialog extends TrayDialog {
 			if (todaysYear < DateTime_MIN_YEAR) {
 				// year would be ignored by DateTime if it is less than MIN_YEAR
 				// The code below is to specify the correct year as per the calendar chosen
-				int extended_year = calendar.get(Calendar.EXTENDED_YEAR);
+				int extended_year = calendar.toInstant().atZone(calendar.getTimeZone().toZoneId()).getYear();
 				dateYear = todaysYear + (dateYear - extended_year);
 			}
 			calendar.set(
