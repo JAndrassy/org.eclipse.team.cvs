@@ -11,7 +11,7 @@
  * Contributors:
  * IBM Corporation - initial API and implementation
  *******************************************************************************/
-package org.eclipse.team.internal.ui.synchronize;
+package org.eclipse.team.internal.ccvs.ui.synchronize;
 
 import java.util.regex.Pattern;
 

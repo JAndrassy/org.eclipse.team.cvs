@@ -35,7 +35,7 @@ import org.eclipse.team.internal.ccvs.core.client.Session;
 import org.eclipse.team.internal.ccvs.core.resources.CVSWorkspaceRoot;
 import org.eclipse.team.internal.ccvs.ui.CVSUIPlugin;
 import org.eclipse.team.internal.ccvs.ui.Policy;
-import org.eclipse.team.internal.ui.mapping.BuildScopeOperation;
+import org.eclipse.team.internal.ccvs.ui.mapping.BuildScopeOperation;
 import org.eclipse.ui.IWorkbenchPart;
 
 /**

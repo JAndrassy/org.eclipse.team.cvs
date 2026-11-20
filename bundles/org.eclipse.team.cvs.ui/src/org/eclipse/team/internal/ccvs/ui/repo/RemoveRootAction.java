@@ -33,7 +33,7 @@ import org.eclipse.team.internal.ccvs.ui.CVSUIMessages;
 import org.eclipse.team.internal.ccvs.ui.CVSUIPlugin;
 import org.eclipse.team.internal.ccvs.ui.model.RepositoryLocationSchedulingRule;
 import org.eclipse.team.internal.ui.actions.TeamAction;
-import org.eclipse.team.internal.ui.dialogs.DetailsDialogWithProjects;
+import org.eclipse.team.internal.ccvs.ui.dialogs.DetailsDialogWithProjects;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.actions.SelectionListenerAction;
 import org.eclipse.ui.progress.IProgressService;

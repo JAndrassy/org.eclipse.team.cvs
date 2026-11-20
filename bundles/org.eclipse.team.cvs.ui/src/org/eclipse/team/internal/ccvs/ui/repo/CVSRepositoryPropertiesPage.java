@@ -40,7 +40,7 @@ import org.eclipse.team.internal.ccvs.ui.*;
 import org.eclipse.team.internal.ccvs.ui.Policy;
 import org.eclipse.team.internal.ccvs.ui.wizards.ConfigurationWizardMainPage;
 import org.eclipse.team.internal.ui.SWTUtils;
-import org.eclipse.team.internal.ui.dialogs.DetailsDialogWithProjects;
+import org.eclipse.team.internal.ccvs.ui.dialogs.DetailsDialogWithProjects;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.dialogs.PropertyPage;

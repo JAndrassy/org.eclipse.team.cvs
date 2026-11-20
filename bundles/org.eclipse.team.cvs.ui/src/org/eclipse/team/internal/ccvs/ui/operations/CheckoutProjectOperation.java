@@ -33,7 +33,7 @@ import org.eclipse.team.internal.ccvs.core.syncinfo.FolderSyncInfo;
 import org.eclipse.team.internal.ccvs.ui.CVSUIMessages;
 import org.eclipse.team.internal.ccvs.ui.CVSUIPlugin;
 import org.eclipse.team.internal.ccvs.ui.Policy;
-import org.eclipse.team.internal.ui.wizards.WorkingSetsDialog;
+import org.eclipse.team.internal.ccvs.ui.wizards.WorkingSetsDialog;
 import org.eclipse.ui.*;
 /**
  * This class acts as an abstract class for checkout operations.

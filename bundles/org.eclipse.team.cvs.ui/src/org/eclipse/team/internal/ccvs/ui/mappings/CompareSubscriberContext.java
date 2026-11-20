@@ -26,9 +26,9 @@ import org.eclipse.team.core.subscribers.Subscriber;
 import org.eclipse.team.internal.ccvs.core.CVSCompareSubscriber;
 import org.eclipse.team.internal.ccvs.ui.CVSUIPlugin;
 import org.eclipse.team.internal.ccvs.ui.ICVSUIConstants;
-import org.eclipse.team.internal.core.subscribers.ContentComparisonDiffFilter;
+import org.eclipse.team.internal.ccvs.core.subscribers.ContentComparisonDiffFilter;
 import org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler;
-import org.eclipse.team.internal.ui.synchronize.RegexDiffFilter;
+import org.eclipse.team.internal.ccvs.ui.synchronize.RegexDiffFilter;
 
 public class CompareSubscriberContext extends CVSSubscriberMergeContext implements IPreferenceChangeListener {
 

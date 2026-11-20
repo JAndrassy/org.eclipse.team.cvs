@@ -13,6 +13,7 @@
  *******************************************************************************/
 package org.eclipse.team.internal.core.streams;
 
+import org.eclipse.team.internal.ccvs.core.CVSMessages;
 import java.io.FilterInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,7 +22,6 @@ import java.io.InterruptedIOException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.OperationCanceledException;
-import org.eclipse.team.internal.core.Messages;
 import org.eclipse.team.internal.core.Policy;
 import org.eclipse.team.internal.core.TeamPlugin;
 
@@ -81,7 +81,7 @@ public class PollingInputStream extends FilterInputStream {
 				} catch (InterruptedIOException e) {
 					if (checkCancellation()) throw new OperationCanceledException();
 					if (++attempts == numAttempts)
-						throw new InterruptedIOException(Messages.PollingInputStream_closeTimeout);
+						throw new InterruptedIOException(CVSMessages.PollingInputStream_closeTimeout);
 					if (Policy.DEBUG_STREAMS) System.out.println("close retry=" + attempts); //$NON-NLS-1$
 				} catch (IOException e) {
 					// ignore it - see https://bugs.eclipse.org/bugs/show_bug.cgi?id=203423#c10
@@ -107,7 +107,7 @@ public class PollingInputStream extends FilterInputStream {
 				return in.read();
 			} catch (InterruptedIOException e) {
 				if (++attempts == numAttempts)
-					throw new InterruptedIOException(Messages.PollingInputStream_readTimeout);
+					throw new InterruptedIOException(CVSMessages.PollingInputStream_readTimeout);
 				if (Policy.DEBUG_STREAMS) System.out.println("read retry=" + attempts); //$NON-NLS-1$
 			}
 		}
@@ -134,7 +134,7 @@ public class PollingInputStream extends FilterInputStream {
 			} catch (InterruptedIOException e) {
 				if (e.bytesTransferred != 0) return e.bytesTransferred; // keep partial transfer
 				if (++attempts == numAttempts)
-					throw new InterruptedIOException(Messages.PollingInputStream_readTimeout);
+					throw new InterruptedIOException(CVSMessages.PollingInputStream_readTimeout);
 				if (Policy.DEBUG_STREAMS) System.out.println("read retry=" + attempts); //$NON-NLS-1$
 			}
 		}
@@ -159,7 +159,7 @@ public class PollingInputStream extends FilterInputStream {
 			} catch (InterruptedIOException e) {
 				if (e.bytesTransferred != 0) return e.bytesTransferred; // keep partial transfer
 				if (++attempts == numAttempts)
-					throw new InterruptedIOException(Messages.PollingInputStream_readTimeout);
+					throw new InterruptedIOException(CVSMessages.PollingInputStream_readTimeout);
 				if (Policy.DEBUG_STREAMS) System.out.println("read retry=" + attempts); //$NON-NLS-1$
 			}
 		}

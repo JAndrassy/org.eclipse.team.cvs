@@ -26,7 +26,7 @@ import org.eclipse.team.core.TeamException;
 import org.eclipse.team.core.variants.PersistantResourceVariantByteStore;
 import org.eclipse.team.core.variants.ResourceVariantByteStore;
 import org.eclipse.team.internal.ccvs.core.*;
-import org.eclipse.team.internal.core.subscribers.DescendantResourceVariantByteStore;
+import org.eclipse.team.internal.ccvs.core.subscribers.DescendantResourceVariantByteStore;
 
 /**
  * CVS sycnrhonization cache that ignores stale remote bytes

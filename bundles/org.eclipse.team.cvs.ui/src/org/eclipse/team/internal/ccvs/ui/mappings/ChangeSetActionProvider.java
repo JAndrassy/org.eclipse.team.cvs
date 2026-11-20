@@ -14,6 +14,7 @@
  *******************************************************************************/
 package org.eclipse.team.internal.ccvs.ui.mappings;
 
+import org.eclipse.team.internal.ccvs.ui.CVSUIMessages;
 import java.util.*;
 
 import org.eclipse.core.resources.*;
@@ -365,7 +366,7 @@ public class ChangeSetActionProvider extends ResourceModelActionProvider {
 				if (containsOnlyUnassignedChanges(selection)) {
 					// only local unassigned changes
 					addToChangeSet = new MenuManager(
-							TeamUIMessages.ChangeLogModelProvider_13);
+							CVSUIMessages.ChangeLogModelProvider_13);
 					appendToGroup(menu, CHANGE_SET_GROUP, addToChangeSet);
 				} else {
 					addToChangeSet = new MenuManager(

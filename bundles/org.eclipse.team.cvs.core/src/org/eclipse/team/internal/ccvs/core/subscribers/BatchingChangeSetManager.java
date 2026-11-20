@@ -11,8 +11,11 @@
  * Contributors:
  * IBM Corporation - initial API and implementation
  *******************************************************************************/
-package org.eclipse.team.internal.core.subscribers;
+package org.eclipse.team.internal.ccvs.core.subscribers;
 
+import org.eclipse.team.internal.core.subscribers.ChangeSet;
+import org.eclipse.team.internal.core.subscribers.ChangeSetManager;
+import org.eclipse.team.internal.core.subscribers.IChangeSetChangeListener;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;

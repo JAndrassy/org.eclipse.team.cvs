@@ -21,6 +21,11 @@ import org.eclipse.osgi.util.NLS;
 public class CVSUIMessages extends NLS {
 	private static final String BUNDLE_NAME = "org.eclipse.team.internal.ccvs.ui.messages";//$NON-NLS-1$
 
+	public static String GenericHistoryView_ShowCommentViewer;
+	public static String GenericHistoryView_ShowTagViewer;
+	public static String GenericHistoryView_WrapComments;
+	public static String ChangeLogModelProvider_13;
+
 	static {
 		// load message values from bundle file
 		NLS.initializeMessages(BUNDLE_NAME, CVSUIMessages.class);
