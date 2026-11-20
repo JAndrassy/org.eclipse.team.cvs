@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.cvs"
       label="Eclipse CVS Client"
-      version="1.4.2301.qualifier"
+      version="1.4.2400.qualifier"
       provider-name="[J.A]">
 
    <description>
