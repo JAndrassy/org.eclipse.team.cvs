@@ -11,7 +11,7 @@
  * Contributors:
  * IBM Corporation - initial API and implementation
  *******************************************************************************/
-package org.eclipse.team.internal.ui.wizards;
+package org.eclipse.team.internal.ccvs.ui.wizards;
 
 import java.util.Hashtable;
 import java.util.Iterator;

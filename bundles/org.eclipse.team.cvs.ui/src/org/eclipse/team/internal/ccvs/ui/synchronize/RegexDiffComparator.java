@@ -11,8 +11,9 @@
  * Contributors:
  * IBM Corporation - initial API and implementation
  *******************************************************************************/
-package org.eclipse.team.internal.ui.synchronize;
+package org.eclipse.team.internal.ccvs.ui.synchronize;
 
+import org.eclipse.team.internal.ui.synchronize.RangeDifferenceComparator;
 import java.util.regex.Pattern;
 
 import org.eclipse.compare.internal.DocLineComparator;

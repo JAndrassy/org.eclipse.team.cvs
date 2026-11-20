@@ -46,9 +46,9 @@ import org.eclipse.team.internal.ccvs.ui.Policy;
 import org.eclipse.team.internal.ccvs.ui.operations.CacheBaseContentsOperation;
 import org.eclipse.team.internal.ccvs.ui.operations.CacheRemoteContentsOperation;
 import org.eclipse.team.internal.core.mapping.GroupProgressMonitor;
-import org.eclipse.team.internal.core.subscribers.ContentComparisonDiffFilter;
+import org.eclipse.team.internal.ccvs.core.subscribers.ContentComparisonDiffFilter;
 import org.eclipse.team.internal.core.subscribers.SubscriberDiffTreeEventHandler;
-import org.eclipse.team.internal.ui.synchronize.RegexDiffFilter;
+import org.eclipse.team.internal.ccvs.ui.synchronize.RegexDiffFilter;
 
 public class WorkspaceSubscriberContext extends CVSSubscriberMergeContext implements IPreferenceChangeListener {
 

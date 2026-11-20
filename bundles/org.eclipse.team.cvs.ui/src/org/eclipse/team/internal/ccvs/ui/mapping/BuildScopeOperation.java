@@ -11,7 +11,7 @@
  * Contributors:
  * IBM Corporation - initial API and implementation
  *******************************************************************************/
-package org.eclipse.team.internal.ui.mapping;
+package org.eclipse.team.internal.ccvs.ui.mapping;
 
 import java.lang.reflect.InvocationTargetException;
 

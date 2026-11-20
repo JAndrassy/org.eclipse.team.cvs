@@ -675,7 +675,7 @@ public class CVSHistoryPage extends HistoryPage implements IAdaptable, IHistoryC
 		PlatformUI.getWorkbench().getHelpSystem().setHelp(getRevisionAction, IHelpContextIds.TAG_WITH_EXISTING_ACTION);
 		
 		// Toggle text visible action
-		toggleTextAction = new Action(TeamUIMessages.GenericHistoryView_ShowCommentViewer) {
+		toggleTextAction = new Action(CVSUIMessages.GenericHistoryView_ShowCommentViewer) {
 			@Override
 			public void run() {
 				setViewerVisibility();
@@ -686,7 +686,7 @@ public class CVSHistoryPage extends HistoryPage implements IAdaptable, IHistoryC
 		//PlatformUI.getWorkbench().getHelpSystem().setHelp(toggleTextAction, IHelpContextIds.SHOW_COMMENT_IN_HISTORY_ACTION);
 
 		// Toggle wrap comments action
-		toggleTextWrapAction = new Action(TeamUIMessages.GenericHistoryView_WrapComments) {
+		toggleTextWrapAction = new Action(CVSUIMessages.GenericHistoryView_WrapComments) {
 			@Override
 			public void run() {
 				setViewerVisibility();
@@ -697,7 +697,7 @@ public class CVSHistoryPage extends HistoryPage implements IAdaptable, IHistoryC
 		//PlatformUI.getWorkbench().getHelpSystem().setHelp(toggleTextWrapAction, IHelpContextIds.SHOW_TAGS_IN_HISTORY_ACTION);
 
 		// Toggle list visible action
-		toggleListAction = new Action(TeamUIMessages.GenericHistoryView_ShowTagViewer) {
+		toggleListAction = new Action(CVSUIMessages.GenericHistoryView_ShowTagViewer) {
 			@Override
 			public void run() {
 				setViewerVisibility();

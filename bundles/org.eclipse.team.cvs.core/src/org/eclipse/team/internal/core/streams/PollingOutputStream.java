@@ -13,6 +13,7 @@
  *******************************************************************************/
 package org.eclipse.team.internal.core.streams;
 
+import org.eclipse.team.internal.ccvs.core.CVSMessages;
 import java.io.FilterOutputStream;
 import java.io.IOException;
 import java.io.InterruptedIOException;
@@ -20,7 +21,6 @@ import java.io.OutputStream;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.OperationCanceledException;
-import org.eclipse.team.internal.core.Messages;
 import org.eclipse.team.internal.core.Policy;
 
 /**
@@ -68,7 +68,7 @@ public class PollingOutputStream extends FilterOutputStream {
 				return;
 			} catch (InterruptedIOException e) {
 				if (++attempts == numAttempts)
-					throw new InterruptedIOException(Messages.PollingOutputStream_writeTimeout);
+					throw new InterruptedIOException(CVSMessages.PollingOutputStream_writeTimeout);
 				if (Policy.DEBUG_STREAMS) System.out.println("write retry=" + attempts); //$NON-NLS-1$
 			}
 		}
@@ -100,7 +100,7 @@ public class PollingOutputStream extends FilterOutputStream {
 					attempts = 0; // made some progress, don't time out quite yet
 				}
 				if (++attempts == numAttempts) {
-					e = new InterruptedIOException(Messages.PollingOutputStream_writeTimeout);
+					e = new InterruptedIOException(CVSMessages.PollingOutputStream_writeTimeout);
 					e.bytesTransferred = count;
 					throw e;
 				}
@@ -132,7 +132,7 @@ public class PollingOutputStream extends FilterOutputStream {
 					attempts = 0; // made some progress, don't time out quite yet
 				}
 				if (++attempts == numAttempts) {
-					e = new InterruptedIOException(Messages.PollingOutputStream_writeTimeout);
+					e = new InterruptedIOException(CVSMessages.PollingOutputStream_writeTimeout);
 					e.bytesTransferred = count;
 					throw e;
 				}
@@ -163,7 +163,7 @@ public class PollingOutputStream extends FilterOutputStream {
 				} catch (InterruptedIOException e) {
 					if (checkCancellation()) throw new OperationCanceledException();
 					if (++attempts == numAttempts)
-						throw new InterruptedIOException(Messages.PollingOutputStream_closeTimeout);
+						throw new InterruptedIOException(CVSMessages.PollingOutputStream_closeTimeout);
 					if (Policy.DEBUG_STREAMS) System.out.println("close retry=" + attempts); //$NON-NLS-1$
 				}
 			}

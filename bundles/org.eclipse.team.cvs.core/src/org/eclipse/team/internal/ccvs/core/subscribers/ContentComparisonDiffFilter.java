@@ -11,8 +11,9 @@
  * Contributors:
  * IBM Corporation - initial API and implementation
  *******************************************************************************/
-package org.eclipse.team.internal.core.subscribers;
+package org.eclipse.team.internal.ccvs.core.subscribers;
 
+import org.eclipse.team.internal.core.subscribers.ContentComparator;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.Assert;

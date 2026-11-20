@@ -13,13 +13,13 @@
  *******************************************************************************/
 package org.eclipse.team.internal.core.streams;
 
+import org.eclipse.team.internal.ccvs.core.CVSMessages;
 import java.io.BufferedOutputStream;
 import java.io.FilterOutputStream;
 import java.io.IOException;
 import java.io.InterruptedIOException;
 import java.io.OutputStream;
 
-import org.eclipse.team.internal.core.Messages;
 
 /**
  * Wraps an output stream that blocks indefinitely to simulate timeouts on write(),
@@ -167,7 +167,7 @@ public class TimeoutOutputStream extends FilterOutputStream {
 	private void syncCommit(boolean partial) throws IOException {
 		checkError(); // check errors before allowing the addition of new bytes
 		if (partial && length != iobuffer.length || length == 0) return;
-		if (waitingForClose) throw new IOException(Messages.TimeoutOutputStream_cannotWriteToStream);
+		if (waitingForClose) throw new IOException(CVSMessages.TimeoutOutputStream_cannotWriteToStream);
 		notify();
 		try {
 			wait(writeTimeout);

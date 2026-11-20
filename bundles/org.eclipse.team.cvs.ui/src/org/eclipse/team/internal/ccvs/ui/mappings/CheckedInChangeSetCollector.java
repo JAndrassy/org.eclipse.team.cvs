@@ -36,6 +36,7 @@ import org.eclipse.team.internal.ccvs.ui.subscriber.CVSChangeSetCollector;
 import org.eclipse.team.internal.ccvs.ui.subscriber.LogEntryCacheUpdateHandler;
 import org.eclipse.team.internal.ccvs.ui.subscriber.LogEntryCacheUpdateHandler.ILogsFetchedListener;
 import org.eclipse.team.internal.core.mapping.SyncInfoToDiffConverter;
+import org.eclipse.team.internal.ccvs.core.subscribers.BatchingChangeSetManager;
 import org.eclipse.team.internal.core.subscribers.*;
 import org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration;
 import org.eclipse.team.ui.synchronize.SynchronizePageActionGroup;

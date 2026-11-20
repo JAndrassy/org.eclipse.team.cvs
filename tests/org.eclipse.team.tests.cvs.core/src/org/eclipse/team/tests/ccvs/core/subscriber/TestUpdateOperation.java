@@ -27,7 +27,7 @@ import org.eclipse.team.internal.ccvs.core.client.Command.LocalOption;
 import org.eclipse.team.internal.ccvs.ui.Policy;
 import org.eclipse.team.internal.ccvs.ui.operations.UpdateOnlyMergableOperation;
 import org.eclipse.team.internal.ccvs.ui.subscriber.WorkspaceUpdateOperation;
-import org.eclipse.team.internal.ui.mapping.BuildScopeOperation;
+import org.eclipse.team.internal.ccvs.ui.mapping.BuildScopeOperation;
 import org.eclipse.team.tests.ccvs.core.EclipseTest;
 import org.eclipse.team.tests.ccvs.ui.ReflectionUtils;
 

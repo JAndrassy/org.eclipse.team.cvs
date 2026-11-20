@@ -21,7 +21,7 @@ import org.eclipse.team.core.synchronize.SyncInfo;
 import org.eclipse.team.core.synchronize.SyncInfoFilter;
 import org.eclipse.team.core.variants.IResourceVariant;
 import org.eclipse.team.internal.core.subscribers.AbstractContentComparator;
-import org.eclipse.team.internal.ui.synchronize.RegexDiffComparator;
+import org.eclipse.team.internal.ccvs.ui.synchronize.RegexDiffComparator;
 
 /**
  * Selects <code>SyncInfo</code> whose all diffs match the given pattern.

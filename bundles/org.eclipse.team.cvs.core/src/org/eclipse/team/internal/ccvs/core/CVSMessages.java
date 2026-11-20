@@ -262,6 +262,12 @@ public class CVSMessages extends NLS {
 	public static String CVSURI_InvalidURI;
 	public static String ThePatchDoesNotContainChangesFor_0;
 
+	public static String PollingInputStream_closeTimeout;
+	public static String PollingInputStream_readTimeout;
+	public static String PollingOutputStream_closeTimeout;
+	public static String PollingOutputStream_writeTimeout;
+	public static String TimeoutOutputStream_cannotWriteToStream;
+
 	static {
 		// load message values from bundle file
 		NLS.initializeMessages(BUNDLE_NAME, CVSMessages.class);

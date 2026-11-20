@@ -11,8 +11,9 @@
  * Contributors:
  *     IBM Corporation - initial API and implementation
  *******************************************************************************/
-package org.eclipse.team.internal.ui.dialogs;
+package org.eclipse.team.internal.ccvs.ui.dialogs;
 
+import org.eclipse.team.internal.ui.dialogs.DetailsDialog;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.swt.SWT;
